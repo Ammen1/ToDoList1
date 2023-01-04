@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style type="text/css">
+    .sidenav {
+      height: 1000px;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top:0;
+      left:0;
+      background-color: #222;
+      overflow-x: hidden;
+      padding-top: 25px;
+    }
+
+    .sidenav a {
+      padding: 6px,8px,6px,16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      display: block;
+    }
+
+    .sidenav a:hover{
+      color: #f1f1f1;
+    }
+
+    .base{
+    margin-left: 160px;
+    padding: 0px 10px;  
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Amen Website{% endblock %}</title>
+</head>
+<body>
+  <div class="sidenav">
+    <a href="/home">home</a>
+    <a href="/create">Create</a>
+    <a href="/view">View</a>
+  </div>
+  <div id="content", name="content", class="base">
+    <div class="row justfy-content-center">
+      <div class="col-8">
+        <h1 class="mt-2">My Site </h1>
+        <hr class="mt-0 mb-4">
+          {% block content %}
+          {% endblock %}
+      </div>   
+    </div>
+  </div>   
+<p>{{name}}</p>
+</body>
+</html>
